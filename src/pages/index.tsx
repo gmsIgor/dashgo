@@ -8,7 +8,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 
 
-import { Input } from '../components/From/Input';
+import { Input } from '../components/Form/Input';
 
 type SignInFormData = {
   email: string;

@@ -31,12 +31,9 @@ import { api } from '../../services/api';
 import { GetServerSideProps } from 'next';
 
 
-
-export default function UserList({ users }) {
+export default function UserList() {
     const [page, setPage] = useState(1);
-    const { data, isLoading, isFetching, error } = useUsers(page, {
-        initialData: users,
-    });
+    const { data, isLoading, error, isFetching, refetch } = useUsers(page);
 
     const isWideVersion = useBreakpointValue({
         base: false,
@@ -121,7 +118,7 @@ export default function UserList({ users }) {
                                                         <Text fontSize='sm' color='gray.300' isTruncated>{user.email}</Text>
                                                     </Box>
                                                 </Td>
-                                                {isWideVersion && <Td>{user.createdAt}</Td>}
+                                                {isWideVersion && <Td>{user.created_at}</Td>}
                                                 <Td>
                                                     {isWideVersion ?
                                                         <Button
@@ -162,15 +159,4 @@ export default function UserList({ users }) {
 
         </Box>
     );
-}
-
-export const getServerSideProps: GetServerSideProps = async () => {
-
-    const { users, totalCount } = await getUsers(1);
-
-    return {
-        props: {
-            users
-        }
-    }
 }

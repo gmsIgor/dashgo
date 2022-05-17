@@ -20,7 +20,7 @@ import { useRouter } from "next/router";
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 
 
-import { Input } from "../../components/From/Input";
+import { Input } from "../../components/Form/Input";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import { api } from "../../services/api";
