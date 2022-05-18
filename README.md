@@ -4,6 +4,7 @@
 
 <p align="center">
   <img alt="mobile dashboard" src=".github/mobile_dashboard.jpeg" width="20%"/>
+  &emsp; &emsp; 
   <img alt="mobile navigation" src=".github/mobile_navigation.jpeg" width="20%"/>
 </p>
 
